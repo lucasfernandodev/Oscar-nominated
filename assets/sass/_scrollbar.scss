@@ -1,0 +1,33 @@
+body::-webkit-scrollbar {
+  background: transparent
+    linear-gradient(180deg, #0f1825 50%, #0f1825 70%, #0f1825 100%) 0% 0%
+    no-repeat padding-box;
+}
+body::-webkit-scrollbar-button {
+  background: transparent;
+  height: 0px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  opacity: 0;
+  background: transparent;
+}
+
+.wheelActive::-webkit-scrollbar-thumb {
+  transition: 350ms ease-in-out;
+  opacity: 1;
+  background: rgba(100, 100, 100, 0.8);
+}
+// body::-webkit-scrollbar-corner       { /* 6 */ }
+// body::-webkit-resizer                { /* 7 */ }
+
+body::-webkit-scrollbar-thumb:hover {
+  transition: 350ms ease-in-out;
+  opacity: 1;
+  background: rgba(100, 100, 100, 0.8);
+}

@@ -1,0 +1,204 @@
+.card{
+
+  height: auto;
+  width: calc((100% / 2) - var(--moviesGap));
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+
+
+  background: transparent linear-gradient(180deg, hsla(215, 42%, 10%, 1) 0%, hsla(215, 42%, 10%, 1) 50%, hsla(240, 35%, 8%, 1) 100%);
+  opacity: 1;
+
+  height: 526px;
+}
+
+@media (max-width: 590px){
+  .card{
+    width: calc((100% / 2) - var(--moviesGap));
+  }
+}
+
+.card > img{
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 15px 15px 30px hsla(0, 0%, 0%, 0.48);
+  position: relative;
+  height: 526px;
+}
+
+.card:hover{
+  z-index: 2500;
+  box-shadow: 0;
+}
+
+.card:hover img{
+  box-shadow: 0;
+}
+
+
+.card-hover{
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  top: 0;
+  left: 0;
+  padding: 32px 24px;
+  gap: 8px;
+  background: rgba(19, 23, 29,0.8);
+  background-blend-mode: multiply;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+
+
+.card-hover.active{
+  transition: 250ms linear;
+  opacity: 1;
+  overflow: unset;
+  width: 100%;
+  animation: cardHover 250ms linear forwards;
+  display: flex;
+  height: 100%;
+  max-height: 526px;
+}
+
+@keyframes cardHover {
+  0%{
+    width: 100%;
+    opacity: 0;
+  }
+  1%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+    z-index: 9999;
+  }
+}
+
+
+.movies .card .title, .subtitle{
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.movies .card .title{
+  font: normal normal bold 20px/24px Montserrat;
+  font-size: 20px;
+  text-shadow: 0px 3px 6px #00000029;
+}
+
+.movies .card .subtitle{
+  font: normal normal 300 16px/19px Montserrat;
+  font-size: 16px;
+  text-shadow: 0px 3px 6px #00000029;
+}
+
+
+.movies .card:nth-child(3n+1),
+.movies .card:nth-child(3n+1) > img,
+.movies .card:nth-child(3n+1) .card-hover.active{
+  height: 350px;
+}
+
+.movies .card:nth-child(odd) { order: 1; }
+.movies .card:nth-child(even) { order: 2; }
+
+
+@media (max-width: 1400px){
+  .card, .card > img{
+    height: 400px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 350px !important;
+  }
+}
+
+@media (width: 820px) and (height: 1180px){
+  .card, .card > img{
+    height: 450px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 370px !important;
+  }
+}
+
+@media (max-width: 590px){
+  .card, .card > img{
+    height: 340px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 260px !important;
+  }
+
+  .card .card-hover{
+    padding: 16px 8px;
+  }
+
+  .movies .card .title{
+    font: normal normal bold 13px/15px Montserrat;
+  }
+  
+  .movies .card .subtitle{
+    font: normal normal 300 12px/14px Montserrat;
+  }
+}
+
+@media (width: 414px) and (height: 896px){
+  .card, .card > img{
+    height: 260px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 500px) and (max-height: 1020px){
+  .card, .card > img{
+    height: 300px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 390px){
+  .card, .card > img{
+    height: 220px;
+  }
+
+  .movies .card:nth-child(3n+1),
+  .movies .card:nth-child(3n+1) > img,
+  .movies .card:nth-child(3n+1) .card-hover.active{
+    height: 180px !important;
+  }
+}

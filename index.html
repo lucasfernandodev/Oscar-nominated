@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Indicados ao oscar 2022</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="loadingOscar">loading..</div>
+    <div class="content">
+      <header class="header">
+        <img src="./assets/images/Logo-Oscars.svg" alt="Logo oscar" />
+      </header>
+
+      <section class="filter">
+        <div class="contentSelect">
+          <div class="select">
+            <span>Filtrar por</span>
+            <span class="value"></span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+
+          <ul class="selectOptions">
+            <li class="option" data-sort="title">Ordem alfabética</li>
+            <li class="option active" data-sort="score">Score do IMDB</li>
+            <li class="option" data-sort="duration">Duração</li>
+            <li class="option" data-sort="indicators">Número de indicados</li>
+          </ul>
+        </div>
+      </section>
+      <section class="movies"></section>
+      <div class="loading"></div>
+    </div>
+
+    <script type="module" defer src="./assets/js/index.js"></script>
+  </body>
+</html>

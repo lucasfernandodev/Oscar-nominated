@@ -1,0 +1,163 @@
+
+.buttonGroup{
+  display: flex;
+  gap: 16px;
+}
+
+.btn-favorite{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #13171d;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  z-index: 300;
+  cursor: pointer;
+  transition: 550ms linear;
+}
+
+
+
+.btn-favorite:hover{
+  background: hsl(216, 78%, 73%);
+}
+
+.btn-hover{
+  width: 148px;
+  height: 51px;
+  background: #13171D 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 6px #00000029;
+  border-radius: 26px;
+  border: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 4px;
+  transition: 250ms linear;
+  color: #fff;
+}
+
+
+button.btn-hover:hover{
+  background-color: #131722;
+}
+
+.btn-hover svg{
+  height: 16px;
+  width: 16px;
+  object-fit: cover;
+}
+
+
+.btn-hover.active{
+  background: #131722;
+}
+
+.btn-hover.hidden{
+  background: #131722;
+}
+
+
+.btn-hover.active svg{
+  animation: rotateIn 350ms linear forwards;
+
+}
+
+.btn-hover.hidden svg{
+  animation: rotateDown 350ms linear forwards;
+}
+
+@keyframes rotateIn {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateDown {
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+
+@media (max-width:  1400px){
+  .btn-favorite{
+    width: 43px;
+    height: 43px;
+    top: 16px;
+    right: 18px
+  }
+
+  .btn-hover{
+    width: 118px;
+    height: 38px;
+    background: #13171D 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 6px #00000029;
+    border-radius: 26px;
+    border: unset;
+
+    position: relative;
+    z-index: 1000;
+    font: normal normal 600 15px/19px Montserrat;
+  }
+
+  .btn-hover svg{
+    height: 14px;
+    width: 14px;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 590px){
+  .buttonGroup{
+    gap: 8px
+  }
+
+  .btn-favorite{
+    width: 36px;
+    height:36px;
+  }
+
+  .btn-hover{
+    height: 32px;
+    gap: 2px;
+    font: normal normal 600 12px/13px Montserrat;
+  }
+}
+
+@media (max-width: 390px){
+  .btn-favorite{
+    top: 16px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 320px){
+  .buttonGroup{
+    gap: 4px
+  }
+  .btn-favorite{
+    width: 26px;
+    height:26px;
+  }
+
+  .btn-hover{
+    height: 24px;
+    gap: 2px;
+    font: normal normal 600 8px/9px Montserrat;
+  }
+}

@@ -1,0 +1,127 @@
+.contentSelect{
+  display: flex;
+  position: relative;
+  right: 0;
+  height: 51px;
+  margin-bottom: 125px;
+
+}
+
+.select{
+  width: 172px;
+  height: 51px;
+
+  background: #FFFFFF19 0% 0% no-repeat padding-box;
+
+  border-radius: 26px;
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 5000;
+  box-shadow: 0px 5px 6px #00000029;
+  gap: 2px;
+}
+
+.select span{
+  font: normal normal 600 16px/19px Montserrat;
+}
+
+.select span, .select svg{
+  color: #fff;
+  stroke: #fff;
+}
+
+.selectOptions{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #00000029;
+  border-radius: 15px;
+  width: 229px;
+  list-style: none;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  opacity: 0;
+}
+
+.selectOptions.active{
+  opacity: 1;
+  z-index: 5000;
+}
+
+.select.active svg{
+  animation: rotateIn 350ms linear forwards;
+
+}
+
+.select.hide svg{
+  animation: rotateDown 350ms linear forwards;
+}
+
+@keyframes rotateIn {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateDown {
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.selectOptions .option{
+  padding: 15px 24px 16px 15px;
+  font: normal normal 300 16px/19px Montserrat;
+  letter-spacing: 0px;
+
+  cursor: pointer;
+}
+
+.selectOptions .option:hover{
+  background: hsla(216, 78%, 23%, 0.3);
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.selectOptions .option.active{
+  background: hsla(216, 78%, 23%, 0.4);
+  color: hsla(0, 0%, 100%, 1);
+}
+
+@media (max-width: 590px){
+  .contentSelect{
+    height: 38px;
+    margin-bottom: 33px;
+  }
+  .select{
+    width: 120px;
+    height: 38px;
+  }
+
+  .select span{
+    text-align: right;
+    font: normal normal 600 12px/14px Montserrat;
+  }
+  
+}
+
+@media (max-width: 375px){
+
+
+  .select svg{
+    height: 14px;
+    width: 14px;
+  }
+  
+}
