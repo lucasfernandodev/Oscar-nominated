@@ -6,7 +6,7 @@ const Popup = () => {
   <div class="popup">
     <div class="row">
       <span class="platform">
-       <img src="/assets/images/n2.png" class="icon" alt="Assistir na Netflix"/>
+       <img src="./assets/images/n2.png" class="icon" alt="Assistir na Netflix"/>
        Netflix
       </span>
       <span class="price">
@@ -15,7 +15,7 @@ const Popup = () => {
     </div>
     <div class="row">
       <span class="platform">
-       <img src="/assets/images/youtube-logo@2x.png" class="icon" alt="Assistir no YouTube"/>
+       <img src="./assets/images/youtube-logo@2x.png" class="icon" alt="Assistir no YouTube"/>
        YouTube
       </span>
       <span class="price">
@@ -31,7 +31,7 @@ const CardHoverContent = (title, subtitle) => {
   return (
     `
     <button class="btn-favorite">
-      <img src="/assets/images/Icon-Guardar.svg" alt="Adicionar aos favoritos" />
+      <img src="./assets/images/Icon-Guardar.svg" alt="Adicionar aos favoritos" />
     </button>
     <h3 class="title">${title}</h3>
     <span class="subtitle">${subtitle}</span>
